@@ -25,7 +25,7 @@ def handle_op(op: int, kwargs: Optional[dict]) -> Optional[dict]:
 
 
 async def client_listen():
-    async with websockets.connect('ws://localhost:8005/ws', ping_interval=None) as websocket:#192.168.1.10
+    async with websockets.connect('ws://192.168.1.10:8005/ws', ping_interval=None) as websocket:
         websocket: WebSocketClientProtocol = websocket
 
         while True:
